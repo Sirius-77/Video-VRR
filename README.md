@@ -1,12 +1,10 @@
 # Visual Route Recognition in Urban Spaces: A Scalable Approach Using Open Street View Data
 
----
 
 > *Menglin Wu, Qingren Jia, Anran Yang, Zhinong Zhong, Mengyu Ma, Luo Chen and Ning Jing. Visual Route Recognition in Urban Spaces: A Scalable Approach Using Open Street View Data. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, vol. 18, pp. 4004-4019, 2025.*
 
 ## Introduction
 
----
 
 This paper presents a novel pipeline for visual route recognition (VRR) in large-scale urban environments, leveraging open street view data. The proposed approach aims to identify the path of a video recorder by analyzing visual cues from continuous video frames and street landmarks, evaluated through datasets from New York and Taipei City. The pipeline begins with SemVG (Semantic Visual Geo-localization), a semantic fused feature extraction network that filters out non-landmark noise, generating robust visual representations. We construct a feature database from multi-perspective street view images to enable efficient feature retrieval for query video frames. Additionally, we introduce a spatio-temporal trajectory reconstruction method that corrects mismatches in the camera's motion path, ensuring consistency.
 
@@ -16,7 +14,6 @@ For more details, check the paper [here](https://ieeexplore.ieee.org/document/10
 
 ## Dataset
 
----
 
 ### Training and Validation Dataset
 
@@ -86,7 +83,6 @@ If you have any concern, please do not hesitate to contact us ([wumenglin2022@nu
 
 ## Train
 
----
 For training SemVG, please modify `util/parser.py` and run:
 
 ```
@@ -95,20 +91,17 @@ python train.py
 
 ## Infer
 
----
 1. Use your pretrained model weight or download our model weight from the [Baidu Cloud link](https://pan.baidu.com/s/15mvAuSuDG4dQpKbrbNLOEQ?pwd=pdzf) with the extraction code of `pdzf`. Put it under the `ckpt/` folder.
 2. Extract features of the perspective street view images with `demo/feature_extractor.py`, and build the feature database. You can also download the features of the steet view images in New York VRR dataset from the [Baidu Cloud link](https://pan.baidu.com/s/1HuHNDlvN_ffTWGsXzmSWzw?pwd=yjqp) with the extraction code of `yjqp`, put it under the `demo/feature_db` folder.
 3. Run `eval_videoloc.py` to obtain the predicted route of each query video.
 
 ## Evaluation
 
----
 1. Download [C-SIM](https://github.com/uef-machine-learning/C-SIM).
 2. Run `calc_indices.py`.
 
 ## Acknowledgement
 
----
 This code is based on the amazing work of:
 
 - [DINOv2](https://github.com/facebookresearch/dinov2)
@@ -119,7 +112,6 @@ This code is based on the amazing work of:
 
 ## Citation
 
----
 If you find this repo useful for your research, please consider citing the paper:
 ```
 @article{wu2025visual,
