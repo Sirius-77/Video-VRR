@@ -91,7 +91,7 @@ python train.py
 
 ## Infer
 
-1. Use your pretrained model weight or download our model weight from the [Baidu Cloud link](https://pan.baidu.com/s/15mvAuSuDG4dQpKbrbNLOEQ?pwd=pdzf) with the extraction code of `pdzf`. Put it under the `ckpt/` folder.
+1. Use your pretrained model weight or download our model weight from the [Baidu Cloud link](https://pan.baidu.com/s/1pujP1SBIB6Y_40T2zTf1Zg?pwd=pyai) with the extraction code of `pyai`. Put it under the `ckpt/` folder.
 2. Extract features of the perspective street view images with `demo/feature_extractor.py`, and build the feature database. You can also download the features of the steet view images in New York VRR dataset from the [Baidu Cloud link](https://pan.baidu.com/s/1HuHNDlvN_ffTWGsXzmSWzw?pwd=yjqp) with the extraction code of `yjqp`, put it under the `demo/feature_db` folder.
 3. Run `eval_videoloc.py` to obtain the predicted route of each query video.
 
@@ -105,6 +105,7 @@ python train.py
 This code is based on the amazing work of:
 
 - [DINOv2](https://github.com/facebookresearch/dinov2)
+- [DeepLabV3Plus-Pytorch](https://github.com/VainF/DeepLabV3Plus-Pytorch)
 - [GSV-Cities](https://github.com/amaralibey/gsv-cities)
 - [BDD100K](https://github.com/bdd100k/bdd100k)
 - [C-SIM](https://github.com/uef-machine-learning/C-SIM)
