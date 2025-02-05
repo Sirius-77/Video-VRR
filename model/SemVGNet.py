@@ -122,7 +122,7 @@ def get_backbone(args):
     elif args.backbone == 'dinov2b':
         backbone = DINOV2(model_name='dinov2_vitb14')
     elif args.backbone == 'dinov2l':
-        backbone = backbone = DINOV2(model_name='dinov2_vitl14')
+        backbone = DINOV2(model_name='dinov2_vitl14')
     return backbone
 
 

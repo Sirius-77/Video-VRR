@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 
 from util import parser
+from pathlib import Path
 
 # DINOv2
 DINOV2_MODEL = [
@@ -18,8 +19,9 @@ myargs = parser.parse_arguments()
 class DINOV2(nn.Module):
     def __init__(self, model_name='dinov2_vitl14'):
         super().__init__()
+        repo_path = str(Path(__file__).resolve().parent.parent / 'dinov2')
         self.model = torch.hub.load(
-            repo_or_dir='D:/Coding/SemVG/model/dinov2',
+            repo_or_dir=repo_path,
             model=model_name,
             source="local"
         )
